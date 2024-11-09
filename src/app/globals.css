@@ -2,20 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer components {
+  .annotation {
+    @apply bg-white rounded shadow-md text-gray-800 font-bold text-lg p-2 absolute top-4 left-4 max-w-sm break-words z-10;
+  }
+  
+  .hotspot {
+    @apply bg-white rounded shadow-md text-blue-500 font-bold text-sm py-2 px-4 absolute z-10;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+model-viewer {
+  --poster-color: transparent;
+  width: 100%;
+  height: 100%;
 }
