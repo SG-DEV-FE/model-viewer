@@ -2,21 +2,21 @@
 
 import { useEffect, useRef } from 'react'
 
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      'model-viewer': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & {
-        src: string;
-        alt: string;
-        'auto-rotate'?: boolean;
-        'camera-controls'?: boolean;
-        'environment-image'?: string;
-        exposure?: string;
-        'shadow-intensity'?: string;
-      };
-    }
-  }
-}
+// declare global {
+//   namespace JSX {
+//     interface IntrinsicElements {
+//       'model-viewer': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & {
+//         src: string;
+//         alt: string;
+//         'auto-rotate'?: boolean;
+//         'camera-controls'?: boolean;
+//         'environment-image'?: string;
+//         exposure?: string;
+//         'shadow-intensity'?: string;
+//       };
+//     }
+//   }
+// }
 
 const ModelViewer = () => {
   const modelViewerRef = useRef<HTMLElement>(null);
@@ -42,7 +42,7 @@ const ModelViewer = () => {
         alt="F50 blank"
         camera-controls
         // environment-image="/sail_texture.png"
-        exposure="0.5"
+        // exposure="0.5"
         shadow-intensity="1"
         className="w-full h-screen"
       >
