@@ -38,7 +38,7 @@ const ModelViewer = () => {
     <div className="w-full h-full">
       <model-viewer
         ref={modelViewerRef}
-        src="/model/compressed-f50.glb"
+        src="/model/AUS_F50-2025.glb"
         alt="F50 blank"
         camera-controls
         // environment-image="/sail_texture.png"
